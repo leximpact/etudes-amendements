@@ -92,6 +92,7 @@ async function main() {
     Legislature.Quinze,
   )
   const amendementsExport: {
+    avantAApres: AvantAApres
     dispositif?: string
     exposeSommaire?: string
     texteLegislatifUid: string
@@ -108,13 +109,13 @@ async function main() {
     if (!documentsLegislatifsUid.has(texteLegislatifRef)) {
       continue
     }
-    if (
-      ![AvantAApres.Avant, AvantAApres.Apres].includes(
-        pointeurFragmentTexte.division.avantAApres,
-      )
-    ) {
-      continue
-    }
+    // if (
+    //   ![AvantAApres.Avant, AvantAApres.Apres].includes(
+    //     pointeurFragmentTexte.division.avantAApres,
+    //   )
+    // ) {
+    //   continue
+    // }
     if (cycleDeVie.etatDesTraitements.etat.libelle !== "Discuté") {
       continue
     }
@@ -125,6 +126,7 @@ async function main() {
     amendementsExport.push({
       texteLegislatifUid: texteLegislatifRef,
       uid,
+      avantAApres: pointeurFragmentTexte.division.avantAApres,
       dispositif:
         contenuAuteur.dispositif === undefined
           ? undefined
