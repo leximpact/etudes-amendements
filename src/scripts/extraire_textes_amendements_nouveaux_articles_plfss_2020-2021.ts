@@ -94,6 +94,8 @@ async function main() {
   const amendementsExport: {
     dispositif?: string
     exposeSommaire?: string
+    texteLegislatifUid: string
+    uid: string
   }[] = []
   for (const amendement of Object.values(amendementByUid)) {
     const {
@@ -101,6 +103,7 @@ async function main() {
       cycleDeVie,
       pointeurFragmentTexte,
       texteLegislatifRef,
+      uid,
     } = amendement
     if (!documentsLegislatifsUid.has(texteLegislatifRef)) {
       continue
@@ -120,6 +123,8 @@ async function main() {
       continue
     }
     amendementsExport.push({
+      texteLegislatifUid: texteLegislatifRef,
+      uid,
       dispositif:
         contenuAuteur.dispositif === undefined
           ? undefined
