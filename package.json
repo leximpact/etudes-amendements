@@ -20,6 +20,7 @@
     "@tricoteuses/assemblee": "^0.17.8",
     "command-line-args": "^5.1.1",
     "fs-extra": "^9.1.0",
+    "node-html-parser": "^2.1.0",
     "papaparse": "^5.3.0"
   },
   "devDependencies": {

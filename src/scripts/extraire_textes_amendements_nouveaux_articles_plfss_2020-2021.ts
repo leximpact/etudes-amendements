@@ -11,7 +11,7 @@ import {
 } from "@tricoteuses/assemblee/lib/loaders"
 import assert from "assert"
 import commandLineArgs from "command-line-args"
-// import fs from "fs-extra"
+import { parse } from "node-html-parser"
 import Papa from "papaparse"
 
 const optionsDefinitions = [
@@ -120,8 +120,14 @@ async function main() {
       continue
     }
     amendementsExport.push({
-      dispositif: contenuAuteur.dispositif,
-      exposeSommaire: contenuAuteur.exposeSommaire,
+      dispositif:
+        contenuAuteur.dispositif === undefined
+          ? undefined
+          : parse(contenuAuteur.dispositif).text,
+      exposeSommaire:
+        contenuAuteur.exposeSommaire === undefined
+          ? undefined
+          : parse(contenuAuteur.exposeSommaire).text,
     })
   }
   const amendementsCsv = Papa.unparse(amendementsExport)
