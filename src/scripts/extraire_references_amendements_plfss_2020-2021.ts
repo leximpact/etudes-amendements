@@ -134,13 +134,6 @@ async function main() {
     if (!documentsLegislatifsUid.has(texteLegislatifRef)) {
       continue
     }
-    // if (
-    //   ![AvantAApres.Avant, AvantAApres.Apres].includes(
-    //     pointeurFragmentTexte.division.avantAApres,
-    //   )
-    // ) {
-    //   continue
-    // }
     if (cycleDeVie.etatDesTraitements.etat.libelle !== "Discuté") {
       continue
     }
