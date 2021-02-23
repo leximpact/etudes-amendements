@@ -20,6 +20,7 @@
     "@tricoteuses/assemblee": "^0.18.1",
     "command-line-args": "^5.1.1",
     "fs-extra": "^9.1.0",
+    "metslesliens": "git+https://git.en-root.org/eraviart/metslesliens.git",
     "node-html-parser": "^2.1.0",
     "papaparse": "^5.3.0"
   },

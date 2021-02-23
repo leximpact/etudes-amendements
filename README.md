@@ -9,5 +9,13 @@ Les données extraites par ces scripts sont généralements mises dans le [dép�
 ### Extraction des textes des amendements sous forme de fichier CSV
 
 ```bash
-npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire_textes_amendements_plfss_2020-2021.ts ../../tricoteuses/assemblee-data/ > ../donnees-extraites-assemblee/textes_amendements_nouveaux_articles_plfss_2020-2021.csv
+npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire_textes_amendements_plfss_2020-2021.ts ../../tricoteuses/assemblee-data/ > ../donnees-extraites-assemblee/textes_amendements_plfss_2020-2021.csv
+```
+
+### Extraction des références aux articles de lois faites par les amendements sous forme de fichier CSV
+
+Note : Ce script utilise la bibliothèque [metslesliens](https://www.npmjs.com/package/metslesliens) pour extraire des amendements les références qu'ils font aux articles de lois (et à leurs alinéas).
+
+```bash
+npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire_references_amendements_plfss_2020-2021.ts ../../tricoteuses/assemblee-data/ > ../donnees-extraites-assemblee/references_amendements_plfss_2020-2021.csv
 ```
