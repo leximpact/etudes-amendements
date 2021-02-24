@@ -5,4 +5,4 @@ numpy
 spacy
 more_itertools
 nltk
-
+wordcloud

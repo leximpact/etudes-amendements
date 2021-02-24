@@ -22,11 +22,6 @@ def load_data():
     word_count.most_common(30)
 
 # Cell
-# Import the wordcloud library
-
-
-
-# Cell
 def build_word_cloud():
     # Join the different processed titles together.
     long_string = ' '.join(list(amdt['txt_sans_stopword'].values))
