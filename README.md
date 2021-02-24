@@ -1,5 +1,52 @@
-# nbdev template
+# Etudes amendements
+> Summary description here.
 
-Use this template to more easily create your [nbdev](https://nbdev.fast.ai/) project.
 
-_If you are using an older version of this template, and want to upgrade to the theme-based version, see [this helper script](https://gist.github.com/hamelsmu/977e82a23dcd8dcff9058079cb4a8f18) (more explanation of what this means is contained in the link to the script)_.
+This file will become your README and also the index of your documentation.
+
+## Install
+
+`pip install your_project_name`
+
+## How to use
+
+# Études des amendements pour LexImpact
+
+Diverses études des amendements et projets de lois de l'Assemblée, pour le projet [LexImpact](https://leximpact.an.fr/)
+
+Les données extraites par ces scripts sont généralement mises dans le [dépôt Git des données extraites de l'Assemblée](https://github.com/leximpact/donnees-extraites-assemblee).
+
+## Utilisation
+
+### Extraction des textes des amendements sous forme de fichier CSV
+
+```bash
+npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire_textes_amendements_plfss_2020-2021.ts ../../tricoteuses/assemblee-data/ > ../donnees-extraites-assemblee/textes_amendements_plfss_2020-2021.csv
+```
+
+### Extraction des références aux articles de lois faites par les amendements sous forme de fichier CSV
+
+Note : Ces script utilisent la bibliothèque [metslesliens](https://www.npmjs.com/package/metslesliens) pour extraire des amendements les références qu'ils font aux articles de lois (et à leurs alinéas).
+
+#### Pour les amendements des PLFSS 2020 et 2021 :
+
+```bash
+npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire_references_amendements_plfss_2020-2021.ts ../../tricoteuses/assemblee-data/ > ../donnees-extraites-assemblee/references_amendements_plfss_2020-2021.csv
+```
+
+#### Pour les amendements de tous les textes passés en Commission des affaires sociales :
+
+```bash
+npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire_references_amendements_affaires_sociales.ts ../../tricoteuses/assemblee-data/ > ../donnees-extraites-assemblee/references_amendements_affaires_sociales.csv
+```
+
+```python
+1+1
+```
+
+
+
+
+    2
+
+
