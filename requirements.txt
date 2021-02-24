@@ -1,0 +1,8 @@
+pandas
+matplotlib
+sklearn
+numpy
+spacy
+more_itertools
+nltk
+

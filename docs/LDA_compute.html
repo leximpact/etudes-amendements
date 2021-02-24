@@ -222,8 +222,8 @@ nb_path: "notebook/03_LDA_compute.ipynb"
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Best Model&#39;s Params:  {&#39;learning_decay&#39;: 0.5, &#39;learning_method&#39;: &#39;online&#39;, &#39;max_iter&#39;: 10, &#39;n_components&#39;: 3, &#39;n_jobs&#39;: -1}
-Best Log Likelihood Score:  -919354.8796033779
-Model Perplexity:  2252.043944176753
+Best Log Likelihood Score:  -21229.415783180353
+Model Perplexity:  2248.6663320542257
 </pre>
 </div>
 </div>
@@ -256,10 +256,10 @@ Model Perplexity:  2252.043944176753
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;mean_fit_time&#39;: array([16.50784359]),
- &#39;std_fit_time&#39;: array([0.73690747]),
- &#39;mean_score_time&#39;: array([0.13072748]),
- &#39;std_score_time&#39;: array([0.01201381]),
+<pre>{&#39;mean_fit_time&#39;: array([0.38533525]),
+ &#39;std_fit_time&#39;: array([0.01228836]),
+ &#39;mean_score_time&#39;: array([0.02309036]),
+ &#39;std_score_time&#39;: array([0.00309237]),
  &#39;param_learning_decay&#39;: masked_array(data=[0.5],
               mask=[False],
         fill_value=&#39;?&#39;,
@@ -285,13 +285,13 @@ Model Perplexity:  2252.043944176753
    &#39;max_iter&#39;: 10,
    &#39;n_components&#39;: 3,
    &#39;n_jobs&#39;: -1}],
- &#39;split0_test_score&#39;: array([-994870.41586479]),
- &#39;split1_test_score&#39;: array([-839108.80416651]),
- &#39;split2_test_score&#39;: array([-908731.90673079]),
- &#39;split3_test_score&#39;: array([-1037968.87546368]),
- &#39;split4_test_score&#39;: array([-816094.39579112]),
- &#39;mean_test_score&#39;: array([-919354.87960338]),
- &#39;std_test_score&#39;: array([86008.00418985]),
+ &#39;split0_test_score&#39;: array([-18425.07818445]),
+ &#39;split1_test_score&#39;: array([-21359.64711255]),
+ &#39;split2_test_score&#39;: array([-20499.78328675]),
+ &#39;split3_test_score&#39;: array([-20304.64253598]),
+ &#39;split4_test_score&#39;: array([-25557.92779617]),
+ &#39;mean_test_score&#39;: array([-21229.41578318]),
+ &#39;std_test_score&#39;: array([2366.63706352]),
  &#39;rank_test_score&#39;: array([1], dtype=int32)}</pre>
 </div>
 
@@ -310,26 +310,10 @@ Model Perplexity:  2252.043944176753
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gscore</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;learning_decay&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.5</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -459,117 +443,117 @@ Model Perplexity:  2252.043944176753
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style  type="text/css" >
-#T_bc260_row0_col0,#T_bc260_row1_col1,#T_bc260_row1_col3,#T_bc260_row2_col1,#T_bc260_row2_col3,#T_bc260_row3_col1,#T_bc260_row3_col2,#T_bc260_row3_col3,#T_bc260_row4_col0,#T_bc260_row4_col1,#T_bc260_row4_col2,#T_bc260_row4_col3,#T_bc260_row5_col0,#T_bc260_row5_col1,#T_bc260_row5_col3,#T_bc260_row6_col1,#T_bc260_row6_col2,#T_bc260_row6_col3,#T_bc260_row7_col1,#T_bc260_row7_col2,#T_bc260_row7_col3,#T_bc260_row8_col0,#T_bc260_row8_col1,#T_bc260_row8_col3,#T_bc260_row9_col1,#T_bc260_row9_col2,#T_bc260_row9_col3,#T_bc260_row10_col1,#T_bc260_row10_col2,#T_bc260_row10_col3,#T_bc260_row11_col0,#T_bc260_row11_col1,#T_bc260_row11_col3,#T_bc260_row12_col1,#T_bc260_row12_col3,#T_bc260_row13_col1,#T_bc260_row13_col3,#T_bc260_row14_col0,#T_bc260_row14_col1,#T_bc260_row14_col3{
-            color:  green;
-            font-weight:  700;
-        }#T_bc260_row0_col1,#T_bc260_row0_col2,#T_bc260_row0_col3,#T_bc260_row1_col0,#T_bc260_row1_col2,#T_bc260_row2_col0,#T_bc260_row2_col2,#T_bc260_row3_col0,#T_bc260_row5_col2,#T_bc260_row6_col0,#T_bc260_row7_col0,#T_bc260_row8_col2,#T_bc260_row9_col0,#T_bc260_row10_col0,#T_bc260_row11_col2,#T_bc260_row12_col0,#T_bc260_row12_col2,#T_bc260_row13_col0,#T_bc260_row13_col2,#T_bc260_row14_col2{
+#T_961c9_row0_col0,#T_961c9_row0_col1,#T_961c9_row1_col1,#T_961c9_row1_col2,#T_961c9_row1_col3,#T_961c9_row2_col0,#T_961c9_row2_col1,#T_961c9_row3_col0,#T_961c9_row3_col2,#T_961c9_row4_col0,#T_961c9_row4_col1,#T_961c9_row5_col0,#T_961c9_row5_col2,#T_961c9_row6_col0,#T_961c9_row6_col1,#T_961c9_row7_col0,#T_961c9_row7_col1,#T_961c9_row8_col0,#T_961c9_row8_col1,#T_961c9_row9_col0,#T_961c9_row9_col2,#T_961c9_row10_col0,#T_961c9_row11_col0,#T_961c9_row11_col2,#T_961c9_row12_col0,#T_961c9_row12_col2,#T_961c9_row13_col0,#T_961c9_row13_col2,#T_961c9_row14_col1,#T_961c9_row14_col2,#T_961c9_row14_col3{
             color:  black;
             font-weight:  400;
-        }</style><table id="T_bc260_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >Topic0</th>        <th class="col_heading level0 col1" >Topic1</th>        <th class="col_heading level0 col2" >Topic2</th>        <th class="col_heading level0 col3" >dominant_topic</th>    </tr></thead><tbody>
+        }#T_961c9_row0_col2,#T_961c9_row0_col3,#T_961c9_row1_col0,#T_961c9_row2_col2,#T_961c9_row2_col3,#T_961c9_row3_col1,#T_961c9_row3_col3,#T_961c9_row4_col2,#T_961c9_row4_col3,#T_961c9_row5_col1,#T_961c9_row5_col3,#T_961c9_row6_col2,#T_961c9_row6_col3,#T_961c9_row7_col2,#T_961c9_row7_col3,#T_961c9_row8_col2,#T_961c9_row8_col3,#T_961c9_row9_col1,#T_961c9_row9_col3,#T_961c9_row10_col1,#T_961c9_row10_col2,#T_961c9_row10_col3,#T_961c9_row11_col1,#T_961c9_row11_col3,#T_961c9_row12_col1,#T_961c9_row12_col3,#T_961c9_row13_col1,#T_961c9_row13_col3,#T_961c9_row14_col0{
+            color:  green;
+            font-weight:  700;
+        }</style><table id="T_961c9_" ><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >Topic0</th>        <th class="col_heading level0 col1" >Topic1</th>        <th class="col_heading level0 col2" >Topic2</th>        <th class="col_heading level0 col3" >dominant_topic</th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_bc260_level0_row0" class="row_heading level0 row0" >Doc0</th>
-                        <td id="T_bc260_row0_col0" class="data row0 col0" >0.990000</td>
-                        <td id="T_bc260_row0_col1" class="data row0 col1" >0.000000</td>
-                        <td id="T_bc260_row0_col2" class="data row0 col2" >0.000000</td>
-                        <td id="T_bc260_row0_col3" class="data row0 col3" >0</td>
+                        <th id="T_961c9_level0_row0" class="row_heading level0 row0" >Doc0</th>
+                        <td id="T_961c9_row0_col0" class="data row0 col0" >0.040000</td>
+                        <td id="T_961c9_row0_col1" class="data row0 col1" >0.040000</td>
+                        <td id="T_961c9_row0_col2" class="data row0 col2" >0.910000</td>
+                        <td id="T_961c9_row0_col3" class="data row0 col3" >2</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row1" class="row_heading level0 row1" >Doc1</th>
-                        <td id="T_bc260_row1_col0" class="data row1 col0" >0.070000</td>
-                        <td id="T_bc260_row1_col1" class="data row1 col1" >0.930000</td>
-                        <td id="T_bc260_row1_col2" class="data row1 col2" >0.000000</td>
-                        <td id="T_bc260_row1_col3" class="data row1 col3" >1</td>
+                        <th id="T_961c9_level0_row1" class="row_heading level0 row1" >Doc1</th>
+                        <td id="T_961c9_row1_col0" class="data row1 col0" >0.990000</td>
+                        <td id="T_961c9_row1_col1" class="data row1 col1" >0.000000</td>
+                        <td id="T_961c9_row1_col2" class="data row1 col2" >0.000000</td>
+                        <td id="T_961c9_row1_col3" class="data row1 col3" >0</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row2" class="row_heading level0 row2" >Doc2</th>
-                        <td id="T_bc260_row2_col0" class="data row2 col0" >0.030000</td>
-                        <td id="T_bc260_row2_col1" class="data row2 col1" >0.960000</td>
-                        <td id="T_bc260_row2_col2" class="data row2 col2" >0.000000</td>
-                        <td id="T_bc260_row2_col3" class="data row2 col3" >1</td>
+                        <th id="T_961c9_level0_row2" class="row_heading level0 row2" >Doc2</th>
+                        <td id="T_961c9_row2_col0" class="data row2 col0" >0.010000</td>
+                        <td id="T_961c9_row2_col1" class="data row2 col1" >0.010000</td>
+                        <td id="T_961c9_row2_col2" class="data row2 col2" >0.980000</td>
+                        <td id="T_961c9_row2_col3" class="data row2 col3" >2</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row3" class="row_heading level0 row3" >Doc3</th>
-                        <td id="T_bc260_row3_col0" class="data row3 col0" >0.000000</td>
-                        <td id="T_bc260_row3_col1" class="data row3 col1" >0.730000</td>
-                        <td id="T_bc260_row3_col2" class="data row3 col2" >0.260000</td>
-                        <td id="T_bc260_row3_col3" class="data row3 col3" >1</td>
+                        <th id="T_961c9_level0_row3" class="row_heading level0 row3" >Doc3</th>
+                        <td id="T_961c9_row3_col0" class="data row3 col0" >0.010000</td>
+                        <td id="T_961c9_row3_col1" class="data row3 col1" >0.990000</td>
+                        <td id="T_961c9_row3_col2" class="data row3 col2" >0.010000</td>
+                        <td id="T_961c9_row3_col3" class="data row3 col3" >1</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row4" class="row_heading level0 row4" >Doc4</th>
-                        <td id="T_bc260_row4_col0" class="data row4 col0" >0.210000</td>
-                        <td id="T_bc260_row4_col1" class="data row4 col1" >0.570000</td>
-                        <td id="T_bc260_row4_col2" class="data row4 col2" >0.220000</td>
-                        <td id="T_bc260_row4_col3" class="data row4 col3" >1</td>
+                        <th id="T_961c9_level0_row4" class="row_heading level0 row4" >Doc4</th>
+                        <td id="T_961c9_row4_col0" class="data row4 col0" >0.000000</td>
+                        <td id="T_961c9_row4_col1" class="data row4 col1" >0.000000</td>
+                        <td id="T_961c9_row4_col2" class="data row4 col2" >1.000000</td>
+                        <td id="T_961c9_row4_col3" class="data row4 col3" >2</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row5" class="row_heading level0 row5" >Doc5</th>
-                        <td id="T_bc260_row5_col0" class="data row5 col0" >0.470000</td>
-                        <td id="T_bc260_row5_col1" class="data row5 col1" >0.530000</td>
-                        <td id="T_bc260_row5_col2" class="data row5 col2" >0.000000</td>
-                        <td id="T_bc260_row5_col3" class="data row5 col3" >1</td>
+                        <th id="T_961c9_level0_row5" class="row_heading level0 row5" >Doc5</th>
+                        <td id="T_961c9_row5_col0" class="data row5 col0" >0.010000</td>
+                        <td id="T_961c9_row5_col1" class="data row5 col1" >0.970000</td>
+                        <td id="T_961c9_row5_col2" class="data row5 col2" >0.020000</td>
+                        <td id="T_961c9_row5_col3" class="data row5 col3" >1</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row6" class="row_heading level0 row6" >Doc6</th>
-                        <td id="T_bc260_row6_col0" class="data row6 col0" >0.000000</td>
-                        <td id="T_bc260_row6_col1" class="data row6 col1" >0.890000</td>
-                        <td id="T_bc260_row6_col2" class="data row6 col2" >0.110000</td>
-                        <td id="T_bc260_row6_col3" class="data row6 col3" >1</td>
+                        <th id="T_961c9_level0_row6" class="row_heading level0 row6" >Doc6</th>
+                        <td id="T_961c9_row6_col0" class="data row6 col0" >0.000000</td>
+                        <td id="T_961c9_row6_col1" class="data row6 col1" >0.000000</td>
+                        <td id="T_961c9_row6_col2" class="data row6 col2" >0.990000</td>
+                        <td id="T_961c9_row6_col3" class="data row6 col3" >2</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row7" class="row_heading level0 row7" >Doc7</th>
-                        <td id="T_bc260_row7_col0" class="data row7 col0" >0.000000</td>
-                        <td id="T_bc260_row7_col1" class="data row7 col1" >0.890000</td>
-                        <td id="T_bc260_row7_col2" class="data row7 col2" >0.110000</td>
-                        <td id="T_bc260_row7_col3" class="data row7 col3" >1</td>
+                        <th id="T_961c9_level0_row7" class="row_heading level0 row7" >Doc7</th>
+                        <td id="T_961c9_row7_col0" class="data row7 col0" >0.010000</td>
+                        <td id="T_961c9_row7_col1" class="data row7 col1" >0.010000</td>
+                        <td id="T_961c9_row7_col2" class="data row7 col2" >0.980000</td>
+                        <td id="T_961c9_row7_col3" class="data row7 col3" >2</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row8" class="row_heading level0 row8" >Doc8</th>
-                        <td id="T_bc260_row8_col0" class="data row8 col0" >0.420000</td>
-                        <td id="T_bc260_row8_col1" class="data row8 col1" >0.580000</td>
-                        <td id="T_bc260_row8_col2" class="data row8 col2" >0.000000</td>
-                        <td id="T_bc260_row8_col3" class="data row8 col3" >1</td>
+                        <th id="T_961c9_level0_row8" class="row_heading level0 row8" >Doc8</th>
+                        <td id="T_961c9_row8_col0" class="data row8 col0" >0.010000</td>
+                        <td id="T_961c9_row8_col1" class="data row8 col1" >0.010000</td>
+                        <td id="T_961c9_row8_col2" class="data row8 col2" >0.980000</td>
+                        <td id="T_961c9_row8_col3" class="data row8 col3" >2</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row9" class="row_heading level0 row9" >Doc9</th>
-                        <td id="T_bc260_row9_col0" class="data row9 col0" >0.000000</td>
-                        <td id="T_bc260_row9_col1" class="data row9 col1" >0.590000</td>
-                        <td id="T_bc260_row9_col2" class="data row9 col2" >0.410000</td>
-                        <td id="T_bc260_row9_col3" class="data row9 col3" >1</td>
+                        <th id="T_961c9_level0_row9" class="row_heading level0 row9" >Doc9</th>
+                        <td id="T_961c9_row9_col0" class="data row9 col0" >0.000000</td>
+                        <td id="T_961c9_row9_col1" class="data row9 col1" >0.990000</td>
+                        <td id="T_961c9_row9_col2" class="data row9 col2" >0.000000</td>
+                        <td id="T_961c9_row9_col3" class="data row9 col3" >1</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row10" class="row_heading level0 row10" >Doc10</th>
-                        <td id="T_bc260_row10_col0" class="data row10 col0" >0.000000</td>
-                        <td id="T_bc260_row10_col1" class="data row10 col1" >0.780000</td>
-                        <td id="T_bc260_row10_col2" class="data row10 col2" >0.210000</td>
-                        <td id="T_bc260_row10_col3" class="data row10 col3" >1</td>
+                        <th id="T_961c9_level0_row10" class="row_heading level0 row10" >Doc10</th>
+                        <td id="T_961c9_row10_col0" class="data row10 col0" >0.010000</td>
+                        <td id="T_961c9_row10_col1" class="data row10 col1" >0.520000</td>
+                        <td id="T_961c9_row10_col2" class="data row10 col2" >0.480000</td>
+                        <td id="T_961c9_row10_col3" class="data row10 col3" >1</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row11" class="row_heading level0 row11" >Doc11</th>
-                        <td id="T_bc260_row11_col0" class="data row11 col0" >0.120000</td>
-                        <td id="T_bc260_row11_col1" class="data row11 col1" >0.870000</td>
-                        <td id="T_bc260_row11_col2" class="data row11 col2" >0.010000</td>
-                        <td id="T_bc260_row11_col3" class="data row11 col3" >1</td>
+                        <th id="T_961c9_level0_row11" class="row_heading level0 row11" >Doc11</th>
+                        <td id="T_961c9_row11_col0" class="data row11 col0" >0.000000</td>
+                        <td id="T_961c9_row11_col1" class="data row11 col1" >0.990000</td>
+                        <td id="T_961c9_row11_col2" class="data row11 col2" >0.000000</td>
+                        <td id="T_961c9_row11_col3" class="data row11 col3" >1</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row12" class="row_heading level0 row12" >Doc12</th>
-                        <td id="T_bc260_row12_col0" class="data row12 col0" >0.010000</td>
-                        <td id="T_bc260_row12_col1" class="data row12 col1" >0.990000</td>
-                        <td id="T_bc260_row12_col2" class="data row12 col2" >0.010000</td>
-                        <td id="T_bc260_row12_col3" class="data row12 col3" >1</td>
+                        <th id="T_961c9_level0_row12" class="row_heading level0 row12" >Doc12</th>
+                        <td id="T_961c9_row12_col0" class="data row12 col0" >0.000000</td>
+                        <td id="T_961c9_row12_col1" class="data row12 col1" >1.000000</td>
+                        <td id="T_961c9_row12_col2" class="data row12 col2" >0.000000</td>
+                        <td id="T_961c9_row12_col3" class="data row12 col3" >1</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row13" class="row_heading level0 row13" >Doc13</th>
-                        <td id="T_bc260_row13_col0" class="data row13 col0" >0.020000</td>
-                        <td id="T_bc260_row13_col1" class="data row13 col1" >0.940000</td>
-                        <td id="T_bc260_row13_col2" class="data row13 col2" >0.040000</td>
-                        <td id="T_bc260_row13_col3" class="data row13 col3" >1</td>
+                        <th id="T_961c9_level0_row13" class="row_heading level0 row13" >Doc13</th>
+                        <td id="T_961c9_row13_col0" class="data row13 col0" >0.000000</td>
+                        <td id="T_961c9_row13_col1" class="data row13 col1" >0.990000</td>
+                        <td id="T_961c9_row13_col2" class="data row13 col2" >0.000000</td>
+                        <td id="T_961c9_row13_col3" class="data row13 col3" >1</td>
             </tr>
             <tr>
-                        <th id="T_bc260_level0_row14" class="row_heading level0 row14" >Doc14</th>
-                        <td id="T_bc260_row14_col0" class="data row14 col0" >0.150000</td>
-                        <td id="T_bc260_row14_col1" class="data row14 col1" >0.840000</td>
-                        <td id="T_bc260_row14_col2" class="data row14 col2" >0.010000</td>
-                        <td id="T_bc260_row14_col3" class="data row14 col3" >1</td>
+                        <th id="T_961c9_level0_row14" class="row_heading level0 row14" >Doc14</th>
+                        <td id="T_961c9_row14_col0" class="data row14 col0" >0.990000</td>
+                        <td id="T_961c9_row14_col1" class="data row14 col1" >0.000000</td>
+                        <td id="T_961c9_row14_col2" class="data row14 col2" >0.000000</td>
+                        <td id="T_961c9_row14_col3" class="data row14 col3" >0</td>
             </tr>
     </tbody></table>
 </div>
@@ -637,17 +621,17 @@ Model Perplexity:  2252.043944176753
     <tr>
       <th>0</th>
       <td>1</td>
-      <td>2923</td>
+      <td>47</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0</td>
-      <td>1460</td>
+      <td>2</td>
+      <td>28</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2</td>
-      <td>414</td>
+      <td>0</td>
+      <td>25</td>
     </tr>
   </tbody>
 </table>
@@ -690,9 +674,9 @@ Model Perplexity:  2252.043944176753
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[0.00155039 0.00155039 0.00155039 0.02860847 0.00155039 0.00155039
- 0.03950717 0.00155039 0.22440802 0.00155039 0.00155039 0.00155039
- 0.00155039 0.00155039 0.69042206] 0.9999999999999999
+<pre>[0.00185185 0.00185185 0.00185186 0.00185185 0.00185185 0.1337625
+ 0.41106784 0.11301411 0.00185185 0.00185185 0.00185186 0.00185186
+ 0.00185185 0.00185186 0.32178515] 0.9999999999999998
 </pre>
 </div>
 </div>
@@ -725,7 +709,7 @@ Model Perplexity:  2252.043944176753
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(4797, 15)</pre>
+<pre>(100, 15)</pre>
 </div>
 
 </div>
@@ -758,10 +742,9 @@ Model Perplexity:  2252.043944176753
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[4.97513153e-04, 4.97512448e-04, 4.97513049e-04, 4.97512770e-04,
-        4.97512929e-04, 4.97513086e-04, 4.97512786e-04, 4.97513071e-04,
-        4.97513451e-04, 4.97513135e-04, 4.97512821e-04, 4.97512990e-04,
-        4.97513258e-04, 4.97513055e-04, 9.93034818e-01]])</pre>
+<pre>array([[0.00740741, 0.00740741, 0.00740741, 0.00740741, 0.00740741,
+        0.00740743, 0.00740741, 0.89629623, 0.00740741, 0.00740741,
+        0.00740741, 0.00740741, 0.00740741, 0.00740741, 0.00740742]])</pre>
 </div>
 
 </div>

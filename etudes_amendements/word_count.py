@@ -13,8 +13,10 @@ from wordcloud import WordCloud
 amdt = None
 def load_data():
     global amdt
-    data_words = pickle.load(urlopen("https://github.com/leximpact/etudes-amendements/raw/nbdev/notebook/data/amdt_data_words.pickle"))
-    amdt = pd.read_csv('https://github.com/leximpact/etudes-amendements/raw/nbdev/notebook/data/amdt_sans_stopword.csv.gz')
+    #data_words = pickle.load(urlopen("https://github.com/leximpact/etudes-amendements/raw/nbdev/notebook/data/amdt_data_words.pickle"))
+    data_words = pickle.load(open("./data/amdt_data_words.pickle", "rb"))
+    #amdt = pd.read_csv('https://github.com/leximpact/etudes-amendements/raw/nbdev/notebook/data/amdt_sans_stopword.csv.gz')
+    amdt = pd.read_csv('./data/amdt_sans_stopword.csv.gz')
 
     word_count = Counter(data_words)
     word_count.most_common(30)
