@@ -11,13 +11,19 @@ entries:
       url: /
     - output: web,pdf
       title: Etude des sujets des amendements PLFSS
-      url: LDA_show.html
+      url: prepare_data.html
     - output: web,pdf
       title: Normalization
       url: prepare_data_Sasha.html
     - output: web,pdf
+      title: Etude des sujets des amendements PLFSS - Nuage de mots
+      url: word_count.html
+    - output: web,pdf
       title: Etude des sujets des amendements PLFSS (LDA)
       url: LDA_compute.html
+    - output: web,pdf
+      title: Etude des sujets des amendements PLFSS - Graph
+      url: LDA_show.html
     - output: web,pdf
       title: Title
       url: eda_ref_amendements.html
