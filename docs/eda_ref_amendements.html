@@ -188,25 +188,42 @@ nb_path: "notebook/eda_ref_amendements.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="display_distinct" class="doc_header"><code>display_distinct</code><a href="https://github.com/leximpact/etudes-amendements/tree/main/etudes_amendements/eda_ref.py#L6" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>display_distinct</code>(<strong><code>df</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
-<span class="n">to_be_removed</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns</span><span class="p">:</span>
-    <span class="n">nb_unique_values</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;df[&quot;&#39;</span> <span class="o">+</span> <span class="n">column</span> <span class="o">+</span> <span class="s1">&#39;&quot;].nunique()&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distinct values in&quot;</span><span class="p">,</span> <span class="n">column</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">nb_unique_values</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">nb_unique_values</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">:</span>
-        <span class="n">to_be_removed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">column</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Column with too many distinct values :</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">to_be_removed</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">Display distinct values</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="n">columns_redux</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">columns</span> <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">to_be_removed</span> <span class="p">]</span>
-<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">columns_redux</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distinct values in&quot;</span><span class="p">,</span> <span class="n">column</span><span class="p">)</span>
-    <span class="nb">eval</span><span class="p">(</span><span class="s1">&#39;df[&quot;&#39;</span> <span class="o">+</span> <span class="n">column</span> <span class="o">+</span> <span class="s1">&#39;&quot;].value_counts()&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display_distinct</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -237,34 +254,8 @@ Distinct values in title : 18
 
 Column with too many distinct values :
  [&#39;alinea&#39;, &#39;article&#39;, &#39;law&#39;, &#39;text&#39;]
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;\nDisplay distinct values\n&#39;</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in alinea1
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1                112
+Distinct values in alinea1
+1                112
 2                 71
 b order: b        49
 3                 48
@@ -272,8 +263,8 @@ a order: a        41
 4° order: 4       20
 1° order: 1       11
 indirect: -1       8
-c order: c         7
 C order: 100       7
+c order: c         7
 4                  6
 2° order: 2        4
 5                  4
@@ -283,50 +274,18 @@ D order: 500       2
 12° order: 12      2
 3° order: 3        1
 d order: d         1
-Name: alinea1, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in alinea2
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2                 5
+Name: alinea1, dtype: int64
+Distinct values in alinea2
+2                 5
 3                 2
 1                 2
+c order: c        1
+a bis order: a    1
 b order: b        1
 7                 1
-a bis order: a    1
-c order: c        1
-Name: alinea2, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in book
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>IV                         22
+Name: alinea2, dtype: int64
+Distinct values in book
+IV                         22
 II                         21
 Ier                        21
 indirect: (relative: 0)    18
@@ -339,31 +298,15 @@ VIII                        6
 I                           4
 8                           3
 VI                          3
+IX                          2
 7                           2
 1er                         2
-IX                          2
 V                           1
-4                           1
 5                           1
-Name: book, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in chapter
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>II                         33
+4                           1
+Name: book, dtype: int64
+Distinct values in chapter
+II                         33
 V                          26
 Ier                        24
 IV                         14
@@ -373,151 +316,55 @@ indirect: (relative: 0)     8
 VI                          5
 5                           4
 7                           3
-1er                         2
 4                           2
+1er                         2
 3                           1
-Name: chapter, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in code-part
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>indirect: 1    26
+Name: chapter, dtype: int64
+Distinct values in code-part
+indirect: 1    26
 order: 6       18
 order: 2       12
-order: 5        4
 order: 3        4
-Name: code-part, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in lawType
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>code            3982
+order: 5        4
+Name: code-part, dtype: int64
+Distinct values in lawType
+code            3982
 loi              348
 constitution      34
 arrêté             8
 décret             6
 ordonnance         3
-Name: lawType, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in paragraph
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.0    2
+Name: lawType, dtype: int64
+Distinct values in paragraph
+1.0    2
 2.0    2
 8.0    1
-Name: paragraph, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in section
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>5                          21
+Name: paragraph, dtype: int64
+Distinct values in section
+5                          21
 1                          12
 2                           9
 3                           9
 IV                          4
 13                          3
 4                           2
-III                         2
-VI                          2
-indirect: (relative: 0)     2
 7                           2
-15                          1
-14                          1
-V                           1
-8                           1
+indirect: (relative: 0)     2
+VI                          2
+III                         2
 order: 3                    1
+V                           1
+14                          1
+15                          1
+8                           1
 XX                          1
-Name: section, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in section1
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>4.0    3
+Name: section, dtype: int64
+Distinct values in section1
+4.0    3
 1.0    3
-Name: section1, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in sentence
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1                          465
+Name: section1, dtype: int64
+Distinct values in sentence
+1                          465
 2                          301
 indirect: -1                78
 3                           54
@@ -525,45 +372,29 @@ indirect: (relative: 0)     16
 4                            5
 indirect: 1                  2
 5                            1
-Name: sentence, dtype: int64</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Distinct values in title
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>III                           34
+Name: sentence, dtype: int64
+Distinct values in title
+III                           34
 II                            30
 Ier                           25
 VI                            11
 IV                            11
 indirect: (relative: 0)       10
 I                              7
-II indirect: (relative: 0)     4
 4                              4
-6                              3
+II indirect: (relative: 0)     4
 V                              3
+6                              3
 3                              3
 1                              2
+9                              1
+2                              1
 7                              1
 1er                            1
-2                              1
 5                              1
-9                              1
-Name: title, dtype: int64</pre>
+Name: title, dtype: int64
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -579,7 +410,7 @@ Name: title, dtype: int64</pre>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">law</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">law</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -592,64 +423,252 @@ Name: title, dtype: int64</pre>
 <div class="output_area">
 
 
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<div class="output_text output_subarea output_execute_result">
-<pre>code général des impôts                                                1358
-code de la sécurité sociale                                            1309
-indirect: (relative: 0)                                                 661
-code de la santé publique                                               357
-code rural et de la pêche maritime                                      181
-code du travail                                                         152
-code de l’action sociale et des familles                                146
-Constitution                                                             34
-code des assurances                                                      19
-code pénal                                                               18
-code de la mutualité                                                     14
-code rural                                                               14
-code des transports                                                      10
-code général des collectivités territoriales                              9
-code des pensions militaires d’invalidité et des victimes de guerre       7
-code de commerce                                                          7
-du 2019-12-24                                                             6
-code monétaire et financier                                               6
-2019-1446 du 2019-12-24                                                   6
-code de l’entrée et du séjour des étrangers et du droit d’asile           4
-code de procédure pénale                                                  4
-code du sport                                                             4
-code des communes                                                         4
-code de la propriété intellectuelle                                       3
-livre des procédures fiscales                                             3
-78-17 du 1978-01-06                                                       3
-2012-1404 du 2012-12-17                                                   3
-du 1992-03-26                                                             3
-code civil                                                                2
-code des pensions civiles et militaires de retraite                       2
-code de l’organisation judiciaire                                         2
-code de l’Action Sociale et des Familles                                  2
-2013-1203 du 2013-12-23                                                   2
-du 1978-01-06                                                             2
-2015-1702 du 2015-12-21                                                   2
-98-1194 du 1998-12-23                                                     2
-du 1901-07-01                                                             2
-du 2017-03-16                                                             1
-du 2006-09-15                                                             1
-du 2002-10-28                                                             1
-du 2020-07-09                                                             1
-2003-1311 du 2003-12-30                                                   1
-du 2018-02-22                                                             1
-du 2009-12-23                                                             1
-code de la défense                                                        1
-2006-1640 du 2006-12-21                                                   1
-code des procédures civiles d’exécution                                   1
-Code de la santé publique                                                 1
-2018-1203 du 2018-12-22                                                   1
-code du tourisme                                                          1
-du 2020-08-07                                                             1
-code de l’environnement                                                   1
-indirect: -1                                                              1
-2014-1554 du 2014-12-22                                                   1
-code du service national                                                  1
-Name: law, dtype: int64</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>law</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>code général des impôts</th>
+      <td>1358</td>
+    </tr>
+    <tr>
+      <th>code de la sécurité sociale</th>
+      <td>1309</td>
+    </tr>
+    <tr>
+      <th>indirect: (relative: 0)</th>
+      <td>661</td>
+    </tr>
+    <tr>
+      <th>code de la santé publique</th>
+      <td>357</td>
+    </tr>
+    <tr>
+      <th>code rural et de la pêche maritime</th>
+      <td>181</td>
+    </tr>
+    <tr>
+      <th>code du travail</th>
+      <td>152</td>
+    </tr>
+    <tr>
+      <th>code de l’action sociale et des familles</th>
+      <td>146</td>
+    </tr>
+    <tr>
+      <th>Constitution</th>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>code des assurances</th>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>code pénal</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>code de la mutualité</th>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>code rural</th>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>code des transports</th>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>code général des collectivités territoriales</th>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>code des pensions militaires d’invalidité et des victimes de guerre</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>code de commerce</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>2019-1446 du 2019-12-24</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>code monétaire et financier</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>du 2019-12-24</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>code des communes</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>code de l’entrée et du séjour des étrangers et du droit d’asile</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>code de procédure pénale</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>code du sport</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>livre des procédures fiscales</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>du 1992-03-26</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>2012-1404 du 2012-12-17</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>code de la propriété intellectuelle</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>78-17 du 1978-01-06</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>code civil</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2015-1702 du 2015-12-21</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>du 1978-01-06</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>code de l’organisation judiciaire</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>code des pensions civiles et militaires de retraite</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>98-1194 du 1998-12-23</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2013-1203 du 2013-12-23</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>code de l’Action Sociale et des Familles</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>du 1901-07-01</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>code de la défense</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>du 2009-12-23</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2006-1640 du 2006-12-21</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>Code de la santé publique</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>code du tourisme</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>indirect: -1</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>du 2020-08-07</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2014-1554 du 2014-12-22</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>du 2020-07-09</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>du 2006-09-15</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>code de l’environnement</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>du 2018-02-22</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>code des procédures civiles d’exécution</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2018-1203 du 2018-12-22</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>du 2002-10-28</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>du 2017-03-16</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>code du service national</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2003-1311 du 2003-12-30</th>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </div>
 
 </div>
