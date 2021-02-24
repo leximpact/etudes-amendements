@@ -29,6 +29,33 @@ nb_path: "notebook/index.ipynb"
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Diverses études des amendements et projets de lois de l'Assemblée, pour le projet <a href="https://leximpact.an.fr/">LexImpact</a></p>
+<p>Les données extraites par ces scripts sont généralement mises dans le <a href="https://github.com/leximpact/donnees-extraites-assemblee">dépôt Git des données extraites de l'Assemblée</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Utilisation">Utilisation<a class="anchor-link" href="#Utilisation"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Extraction-des-textes-des-amendements-sous-forme-de-fichier-CSV">Extraction des textes des amendements sous forme de fichier CSV<a class="anchor-link" href="#Extraction-des-textes-des-amendements-sous-forme-de-fichier-CSV"> </a></h3><div class="highlight"><pre><span></span>npx babel-node --extensions <span class="s2">&quot;.ts&quot;</span> --max-old-space-size<span class="o">=</span><span class="m">4096</span> src/scripts/extraire_textes_amendements_plfss_2020-2021.ts ../../tricoteuses/assemblee-data/ &gt; ../donnees-extraites-assemblee/textes_amendements_plfss_2020-2021.csv
+</pre></div>
+<h3 id="Extraction-des-r&#233;f&#233;rences-aux-articles-de-lois-faites-par-les-amendements-sous-forme-de-fichier-CSV">Extraction des r&#233;f&#233;rences aux articles de lois faites par les amendements sous forme de fichier CSV<a class="anchor-link" href="#Extraction-des-r&#233;f&#233;rences-aux-articles-de-lois-faites-par-les-amendements-sous-forme-de-fichier-CSV"> </a></h3><p>Note : Ces script utilisent la bibliothèque <a href="https://www.npmjs.com/package/metslesliens">metslesliens</a> pour extraire des amendements les références qu'ils font aux articles de lois (et à leurs alinéas).</p>
+<h4 id="Pour-les-amendements-des-PLFSS-2020-et-2021-:">Pour les amendements des PLFSS 2020 et 2021 :<a class="anchor-link" href="#Pour-les-amendements-des-PLFSS-2020-et-2021-:"> </a></h4><div class="highlight"><pre><span></span>npx babel-node --extensions <span class="s2">&quot;.ts&quot;</span> --max-old-space-size<span class="o">=</span><span class="m">4096</span> src/scripts/extraire_references_amendements_plfss_2020-2021.ts ../../tricoteuses/assemblee-data/ &gt; ../donnees-extraites-assemblee/references_amendements_plfss_2020-2021.csv
+</pre></div>
+<h4 id="Pour-les-amendements-de-tous-les-textes-pass&#233;s-en-Commission-des-affaires-sociales-:">Pour les amendements de tous les textes pass&#233;s en Commission des affaires sociales :<a class="anchor-link" href="#Pour-les-amendements-de-tous-les-textes-pass&#233;s-en-Commission-des-affaires-sociales-:"> </a></h4><div class="highlight"><pre><span></span>npx babel-node --extensions <span class="s2">&quot;.ts&quot;</span> --max-old-space-size<span class="o">=</span><span class="m">4096</span> src/scripts/extraire_references_amendements_affaires_sociales.ts ../../tricoteuses/assemblee-data/ &gt; ../donnees-extraites-assemblee/references_amendements_affaires_sociales.csv
+</pre></div>
+
+</div>
+</div>
+</div>
 </div>
  
 
