@@ -16,6 +16,9 @@ entries:
       title: Normalization
       url: prepare_data_Sasha.html
     - output: web,pdf
+      title: Etude des sujets des amendements PLFSS (LDA)
+      url: LDA_compute.html
+    - output: web,pdf
       title: Title
       url: eda_ref_amendements.html
     output: web
