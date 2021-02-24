@@ -6,3 +6,4 @@ spacy
 more_itertools
 nltk
 wordcloud
+pyLDAvis
