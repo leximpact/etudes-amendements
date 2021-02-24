@@ -1,0 +1,11 @@
+{
+  "etudes_amendements": {
+    "Overview": "/",
+    "Etude des sujets des amendements PLFSS": "prepare_data.html",
+    "Normalization": "prepare_data_Sasha.html",
+    "Etude des sujets des amendements PLFSS - Nuage de mots": "word_count.html",
+    "Etude des sujets des amendements PLFSS (LDA)": "LDA_compute.html",
+    "Etude des sujets des amendements PLFSS - Graph": "LDA_show.html",
+    "Title": "eda_ref_amendements.html"
+  }
+}
