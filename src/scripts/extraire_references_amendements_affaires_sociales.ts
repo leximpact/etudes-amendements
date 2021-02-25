@@ -56,21 +56,29 @@ function* iterFlattenedReferences(
 }
 
 async function main() {
-  const { documentByUid } = loadAssembleeData(
+  const { acteurByUid, amendementByUid, documentByUid, organeByUid } = loadAssembleeData(
     options.dataDir,
-    EnabledDatasets.DossiersLegislatifs,
+    EnabledDatasets.ActeursEtOrganes | EnabledDatasets.Amendements | EnabledDatasets.DossiersLegislatifs,
     Legislature.Quinze,
   )
 
-  const { amendementByUid } = loadAssembleeData(
-    options.dataDir,
-    EnabledDatasets.Amendements,
-    Legislature.Quinze,
-  )
   const rows = []
-  const columns = new Set<string>(["text", "texteLegislatifUid", "uid", "year"])
+  const columns = new Set<string>([
+    "auteur",
+    "auteurType",
+    "etat",
+    "groupePolitique",
+    "sort",
+    "text",
+    "texteLegislatifUid",
+    "uid",
+    "year",
+  ])
   for (const amendement of Object.values(amendementByUid)) {
-    const { corps, cycleDeVie, texteLegislatifRef, uid } = amendement
+    const { corps, cycleDeVie, signataires, texteLegislatifRef, uid } = amendement
+    const { auteur } = signataires
+    const acteur = auteur.acteurRef === undefined ? undefined : acteurByUid[auteur.acteurRef]
+    const ident = acteur?.etatCivil.ident
     const document = documentByUid[texteLegislatifRef]
     if (document === undefined) {
       continue
@@ -105,6 +113,10 @@ async function main() {
       for (const flattenedReferences of iterFlattenedReferences(link.tree)) {
         const countByType = new Map<ReferenceType, number>()
         const row: { [name: string]: Reference | string | undefined } = {
+          auteur: ident === undefined ? undefined : `${ident.nom} ${ident.prenom}`,
+          auteurType: auteur.typeAuteur,
+          groupePolitique: auteur.groupePolitiqueRef === undefined ? undefined : organeByUid[auteur.groupePolitiqueRef]?.libelleAbrege,
+          sort: cycleDeVie.sort,
           text: link.text,
           texteLegislatifUid: texteLegislatifRef,
           uid,
