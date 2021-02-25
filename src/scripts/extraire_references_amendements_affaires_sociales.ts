@@ -68,7 +68,7 @@ async function main() {
     Legislature.Quinze,
   )
   const rows = []
-  const columns = new Set<string>(["text"])
+  const columns = new Set<string>(["text", "texteLegislatifUid", "uid", "year"])
   for (const amendement of Object.values(amendementByUid)) {
     const { corps, cycleDeVie, texteLegislatifRef, uid } = amendement
     const document = documentByUid[texteLegislatifRef]
@@ -104,10 +104,11 @@ async function main() {
     for (const link of links) {
       for (const flattenedReferences of iterFlattenedReferences(link.tree)) {
         const countByType = new Map<ReferenceType, number>()
-        const row: { [name: string]: Reference | string } = {
+        const row: { [name: string]: Reference | string | undefined } = {
+          text: link.text,
           texteLegislatifUid: texteLegislatifRef,
           uid,
-          text: link.text,
+          year: cycleDeVie.dateSort?.getFullYear().toString(),
         }
         for (const reference of flattenedReferences) {
           assert(reference.type.endsWith("-reference"))
