@@ -750,7 +750,8 @@ Name: year, dtype: int64
     <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
     <span class="n">df_tmp</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;year == @y&quot;</span><span class="p">)[</span><span class="s2">&quot;law_article&quot;</span><span class="p">]</span>
-    <span class="n">df_tmp</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">df_tmp</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">df_tmp</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s1">-top-article.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -814,26 +815,6 @@ Name: year, dtype: int64
       <th>indirect: (relative: 0) 1649 quater h</th>
       <td>6</td>
     </tr>
-    <tr>
-      <th>code général des impôts 1600</th>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>code général des impôts 1649 quater e</th>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>code général des impôts 1649 quater h</th>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>code général des impôts 199 terdecies-0 a</th>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>code général des impôts 154 bis-0 a</th>
-      <td>4</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -894,26 +875,6 @@ Name: year, dtype: int64
     <tr>
       <th>code général des impôts 39 ak</th>
       <td>31</td>
-    </tr>
-    <tr>
-      <th>code général des impôts 39 ac</th>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>code de l’environnement l541-10-6</th>
-      <td>25</td>
-    </tr>
-    <tr>
-      <th>constitution 34</th>
-      <td>18</td>
-    </tr>
-    <tr>
-      <th>code général des impôts 39 g</th>
-      <td>17</td>
-    </tr>
-    <tr>
-      <th>code général des impôts 278-0 bis</th>
-      <td>16</td>
     </tr>
   </tbody>
 </table>
@@ -976,26 +937,6 @@ Name: year, dtype: int64
       <th>code général des collectivités territoriales d2224-3</th>
       <td>12</td>
     </tr>
-    <tr>
-      <th>code des transports l1431-3</th>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>code de l’entrée et du séjour des étrangers et du droit d’asile l311-13</th>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>code de la construction et de l’habitation l411-2</th>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>code général des impôts 1595</th>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>code général des impôts 1594 a</th>
-      <td>8</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -1057,26 +998,6 @@ Name: year, dtype: int64
       <th>code général des impôts 1519 h</th>
       <td>13</td>
     </tr>
-    <tr>
-      <th>code général des impôts 1594 d</th>
-      <td>12</td>
-    </tr>
-    <tr>
-      <th>2011-1977 du 2011-12-28 46</th>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>code de la construction et de l’habitation l411-2</th>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>code de la sécurité sociale l162-21-3</th>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>code des douanes 265</th>
-      <td>10</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -1136,10 +1057,6 @@ Name: year, dtype: int64
     </tr>
     <tr>
       <th>code de l’éducation d821-1</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>code de la santé publique l1110-4</th>
       <td>1</td>
     </tr>
   </tbody>
