@@ -30,3 +30,13 @@ npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire
 ```bash
 npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire_references_amendements_affaires_sociales.ts ../../tricoteuses/assemblee-data/ > ../donnees-extraites-assemblee/references_amendements_affaires_sociales.csv
 ```
+
+### Extraction des références extraites des articles amendés sous forme de fichier CSV
+
+Note : Ces script utilisent la bibliothèque [metslesliens](https://www.npmjs.com/package/metslesliens) pour extraire des articles des projets de lois, les références qu'ils font aux articles de lois (et à leurs alinéas).
+
+#### Pour les PLFSS 2020 et 2021 :
+
+```bash
+npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire_references_articles_amendes_plfss_2020-2021.ts ../../tricoteuses/assemblee-data > ../donnees-extraites-assemblee/references_articles_amendes_plfss_2020-2021.csv
+```
