@@ -25,7 +25,7 @@ entries:
       title: Etude des sujets des amendements PLFSS - Graph
       url: LDA_show.html
     - output: web,pdf
-      title: Title
+      title: "Etude des r\xE9f\xE9rences des amendements"
       url: eda_ref_amendements.html
     output: web
     title: etudes_amendements
