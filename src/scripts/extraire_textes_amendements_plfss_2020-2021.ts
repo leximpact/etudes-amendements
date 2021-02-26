@@ -40,7 +40,7 @@ function* iterActes(
 function* iterDocumentsLegislatifsUid(
   dossier: DossierParlementaire,
 ): Generator<string, void, void> {
-  for (const acte of iterActes(dossier.actesLegislatifs)) {
+  for (const acte of iterActes(dossier.actesLegislatifs ?? [])) {
     if (acte.texteAdopteRef !== undefined) {
       yield acte.texteAdopteRef
     }
