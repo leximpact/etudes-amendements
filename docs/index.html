@@ -52,6 +52,9 @@ nb_path: "notebook/index.ipynb"
 </pre></div>
 <h4 id="Pour-les-amendements-de-tous-les-textes-pass&#233;s-en-Commission-des-affaires-sociales-:">Pour les amendements de tous les textes pass&#233;s en Commission des affaires sociales :<a class="anchor-link" href="#Pour-les-amendements-de-tous-les-textes-pass&#233;s-en-Commission-des-affaires-sociales-:"> </a></h4><div class="highlight"><pre><span></span>npx babel-node --extensions <span class="s2">&quot;.ts&quot;</span> --max-old-space-size<span class="o">=</span><span class="m">4096</span> src/scripts/extraire_references_amendements_affaires_sociales.ts ../../tricoteuses/assemblee-data/ &gt; ../donnees-extraites-assemblee/references_amendements_affaires_sociales.csv
 </pre></div>
+<h3 id="Extraction-des-r&#233;f&#233;rences-extraites-des-articles-amend&#233;s-sous-forme-de-fichier-CSV">Extraction des r&#233;f&#233;rences extraites des articles amend&#233;s sous forme de fichier CSV<a class="anchor-link" href="#Extraction-des-r&#233;f&#233;rences-extraites-des-articles-amend&#233;s-sous-forme-de-fichier-CSV"> </a></h3><p>Note : Ces script utilisent la bibliothèque <a href="https://www.npmjs.com/package/metslesliens">metslesliens</a> pour extraire des articles des projets de lois, les références qu'ils font aux articles de lois (et à leurs alinéas).</p>
+<h4 id="Pour-les-PLFSS-2020-et-2021-:">Pour les PLFSS 2020 et 2021 :<a class="anchor-link" href="#Pour-les-PLFSS-2020-et-2021-:"> </a></h4><div class="highlight"><pre><span></span>npx babel-node --extensions <span class="s2">&quot;.ts&quot;</span> --max-old-space-size<span class="o">=</span><span class="m">4096</span> src/scripts/extraire_references_articles_amendes_plfss_2020-2021.ts ../../tricoteuses/assemblee-data &gt; ../donnees-extraites-assemblee/references_articles_amendes_plfss_2020-2021.csv
+</pre></div>
 
 </div>
 </div>
