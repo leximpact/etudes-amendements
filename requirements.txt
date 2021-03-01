@@ -7,3 +7,4 @@ more_itertools
 nltk
 wordcloud
 pyLDAvis
+pandas-profiling[notebook]
