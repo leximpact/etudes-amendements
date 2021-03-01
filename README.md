@@ -40,3 +40,4 @@ Note : Ces script utilisent la bibliothèque [metslesliens](https://www.npmjs.co
 ```bash
 npx babel-node --extensions ".ts" --max-old-space-size=4096 src/scripts/extraire_references_articles_amendes_plfss_2020-2021.ts ../../tricoteuses/assemblee-data > ../donnees-extraites-assemblee/references_articles_amendes_plfss_2020-2021.csv
 ```
+
