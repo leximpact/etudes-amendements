@@ -1,12 +1,14 @@
 import {
-  ActeLegislatif,
-  AvantAApres,
-  DossierParlementaire,
-  Legislature,
   Node,
   NodeType,
   parseTexteMarkdown,
   stringifyTree,
+} from "@tricoteuses/arbre-de-la-loi"
+import {
+  ActeLegislatif,
+  AvantAApres,
+  DossierParlementaire,
+  Legislature,
   TypeActeLegislatif,
 } from "@tricoteuses/assemblee"
 import {
@@ -151,6 +153,7 @@ async function main() {
     Map<
       string,
       {
+        amendements1Signataire: number
         amendementsMoins10Signataires: number
         amendementsPlus10Signataires: number
       }
@@ -186,6 +189,7 @@ async function main() {
     let infosAmendement = infosAmendementByTitreArticle.get(titreArticle)
     if (infosAmendement === undefined) {
       infosAmendement = {
+        amendements1Signataire: 0,
         amendementsMoins10Signataires: 0,
         amendementsPlus10Signataires: 0,
       }
@@ -196,13 +200,19 @@ async function main() {
       signataires.cosignatairesRefs.length >= 9
     ) {
       infosAmendement.amendementsPlus10Signataires++
-    } else {
+    } else if (
+      signataires.cosignatairesRefs !== undefined &&
+      signataires.cosignatairesRefs.length > 0
+    ) {
       infosAmendement.amendementsMoins10Signataires++
+    } else {
+      infosAmendement.amendements1Signataire++
     }
   }
 
   const rows = []
   const columns = new Set<string>([
+    "amendements1Signataire",
     "amendementsMoins10Signataires",
     "amendementsPlus10Signataires",
     "text",
@@ -273,6 +283,7 @@ async function main() {
           )) {
             const countByType = new Map<ReferenceType, number>()
             const row: { [name: string]: Reference | string | undefined } = {
+              amendements1Signataire: infosAmendement.amendements1Signataire.toString(),
               amendementsMoins10Signataires: infosAmendement.amendementsMoins10Signataires.toString(),
               amendementsPlus10Signataires: infosAmendement.amendementsPlus10Signataires.toString(),
               text: link.text,
