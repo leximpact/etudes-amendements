@@ -44,7 +44,7 @@ function* iterActes(
 function* iterDocumentsLegislatifsUid(
   dossier: DossierParlementaire,
 ): Generator<string, void, void> {
-  for (const acte of iterActes(dossier.actesLegislatifs)) {
+  for (const acte of iterActes(dossier.actesLegislatifs ?? [])) {
     if (acte.texteAdopteRef !== undefined) {
       yield acte.texteAdopteRef
     }
@@ -105,7 +105,7 @@ function* iterFlattenedReferences(
 }
 
 async function main() {
-  const { acteurByUid, documentByUid, dossierParlementaireByUid, organeByUid } = loadAssembleeData(
+  const { acteurByUid, dossierParlementaireByUid, organeByUid } = loadAssembleeData(
     options.dataDir,
     EnabledDatasets.ActeursEtOrganes | EnabledDatasets.DossiersLegislatifs,
     Legislature.Quinze,
@@ -131,7 +131,6 @@ async function main() {
   const columns = new Set<string>([
     "auteur",
     "auteurType",
-    "etat",
     "groupePolitique",
     "sort",
     "text",

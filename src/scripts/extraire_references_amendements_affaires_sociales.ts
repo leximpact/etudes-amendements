@@ -66,7 +66,6 @@ async function main() {
   const columns = new Set<string>([
     "auteur",
     "auteurType",
-    "etat",
     "groupePolitique",
     "sort",
     "text",
