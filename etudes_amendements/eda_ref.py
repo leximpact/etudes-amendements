@@ -5,6 +5,7 @@ __all__ = ['load_data', 'plot_serie', 'display_distinct']
 # Cell
 def load_data(file):
     df = pd.read_csv(file)
+    # All string to lowercase
     df = df.applymap(lambda s:s.lower() if type(s) == str else s)
     return df
 

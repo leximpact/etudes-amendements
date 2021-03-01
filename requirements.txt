@@ -8,3 +8,4 @@ nltk
 wordcloud
 pyLDAvis
 pandas-profiling[notebook]
+openpyxl # to write XLSX
