@@ -25,6 +25,9 @@ entries:
       title: Etude des sujets des amendements PLFSS - Graph
       url: LDA_show.html
     - output: web,pdf
+      title: __Etudes des Amendements du PLFSS 2020-2021__
+      url: Etude_amendements_2020-2021-bco.html
+    - output: web,pdf
       title: "Etude des r\xE9f\xE9rences des amendements"
       url: eda_ref_amendements.html
     output: web
