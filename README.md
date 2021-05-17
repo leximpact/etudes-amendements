@@ -1,3 +1,11 @@
+---
+
+# Pour consulter la dernière version du projet, merci de vous rendre sur https://git.leximpact.dev/leximpact/etudes-amendements/
+
+---
+![](changement-depot-github-gitlab-illustration-small.png)
+---
+
 # Études des amendements pour LexImpact
 
 
